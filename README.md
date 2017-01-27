@@ -45,7 +45,7 @@ void loop() {
 
 ## Documentation
 ### `GroveGestureSensor(GrovePin pins)`
-parameters: pins - must be GrovePin::GROVE_I2C
+Parameters: pins - must be GrovePin::GROVE_I2C
 
 ### `void initialize()`
 Initialize the sensor before using it.
