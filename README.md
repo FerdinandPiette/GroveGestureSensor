@@ -44,22 +44,22 @@ void loop() {
 ```
 
 ## Documentation
-### GroveGestureSensor(GrovePin pins)
+### `GroveGestureSensor(GrovePin pins)`
 parameters: pins - must be GrovePin::GROVE_I2C
 
-### void initialize()
+### `void initialize()`
 Initialize the sensor before using it.
 
-### boolean isInitialized()
+### `boolean isInitialized()`
 Return `true` if the sensor is initialized - `false` otherwise
 
-### uint8_t getInitializationErrorCode()
+### `uint8_t getInitializationErrorCode()`
 Return the error code after the initialization failure.
 - 0 : The sensor is correctly initialized
 - 0xFE : The `initialize` method was not called yet
 - For the other error code, check the source code (TODO)
 
-### GroveGesture getGesture()
+### `GroveGesture getGesture()`
 Return the detected gesture :
 - GroveGesture::NONE : No gesture detected
 - GroveGesture::LEFT
