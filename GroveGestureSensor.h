@@ -13,9 +13,9 @@ class GroveGestureSensor {
 		uint8_t _initializationErrorCode;
 		
 	public:
-		GroveGestureSensor(GrovePin pins);
+		GroveGestureSensor();
 		virtual ~GroveGestureSensor() {};
-		void initialize();
+		void initialize(GrovePin pins);
 		boolean isInitialized();
 		uint8_t getInitializationErrorCode();
 		GroveGesture getGesture();

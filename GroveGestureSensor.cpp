@@ -1,11 +1,11 @@
 #include "GroveGestureSensor.h"
 #include "paj7620.h"
 
-GroveGestureSensor::GroveGestureSensor(GrovePin pins) {
+GroveGestureSensor::GroveGestureSensor() {
 	this->_initializationErrorCode = 0xFE;
 }
 
-void GroveGestureSensor::initialize() {	
+void GroveGestureSensor::initialize(GrovePin pins) {	
 	this->_initializationErrorCode = paj7620Init();
 }
 

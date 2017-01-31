@@ -7,11 +7,11 @@ Gesture Sensor Library for Arduino Uno + Grove shield.
 ```c++
 #include <GroveGestureSensor.h>
 
-GroveGestureSensor gestureSensor(GROVE_I2C);
+GroveGestureSensor gestureSensor;
 
 void setup() {
   Serial.begin(9600);
-  gestureSensor.initialize();
+  gestureSensor.initialize(GROVE_I2C);
   if(!gestureSensor.isInitialized()) {
     Serial.print("GroveGestureSensor initialization error :");
     Serial.println(gestureSensor.getInitializationErrorCode());
@@ -44,12 +44,12 @@ void loop() {
 ```
 
 ## Documentation
-### `GroveGestureSensor(GrovePin pins)`
+
+### `void initialize(GrovePin pins)`
+Initialize the sensor before using it.
+
 Parameters: 
 - `pins`: must be GrovePin::GROVE_I2C
-
-### `void initialize()`
-Initialize the sensor before using it.
 
 ### `boolean isInitialized()`
 Return `true` if the sensor is initialized - `false` otherwise
