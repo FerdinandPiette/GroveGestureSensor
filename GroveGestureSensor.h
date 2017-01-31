@@ -2,7 +2,7 @@
 #define GroveGesture_H
 
 #include <Arduino.h>
-#include "../Grove/Grove.h"
+#include <Grove.h>
 
 typedef enum GroveGesture {
 	NONE = 0, RIGHT, LEFT, UP, DOWN, FORWARD, BACKWARD, CLOCKWISE, COUNTER_CLOCKWISE, WAVE	
